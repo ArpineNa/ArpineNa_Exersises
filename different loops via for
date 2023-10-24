@@ -1,0 +1,159 @@
+1. Write  sort  with for loop (will take array as a parameter and return sorted array)
+
+{1. In the given array, sort the even numbers in one 
+array and the odd numbers in another array using a for loop.}
+
+
+function separateEvenAndOdd(arr) {
+    const evenArray = [];
+    const oddArray = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            evenArray.push(arr[i]);
+        } else {
+            oddArray.push(arr[i]);
+        }
+    }
+
+    return { even: evenArray, odd: oddArray };
+}
+
+const inputArray = [5, 21, 5, 487, 254, 32, 67];
+const separatedArrays = separateEvenAndOdd(inputArray);
+console.log("Even numbers:", separatedArrays.even);
+console.log("Odd numbers:", separatedArrays.odd);
+
+
+// 2. Write reduce function in for loop (foreach).
+
+const sum = function(array) {
+    const accum= 0;
+    array.forEach(function (val) {
+        accum + val;
+    });
+    return accum;
+}
+
+console.log(sum[2,4,5,10]); // chashxatec??? inchu???
+
+
+const a= [2,4,5,10].reduce(function(accum, val){
+    return accum+val;
+}, 0);
+
+console.log(a);
+
+
+
+// 3. Write filter function in for loop
+
+const Array = [5, 21, 5, 487, 254, 32, 67];
+
+function separateEvenAndOdd(arr) {
+    const evenArray = [];
+    const oddArray = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            evenArray.push(arr[i]);
+        } else {
+            oddArray.push(arr[i]);
+        }
+    }
+
+    return { even: evenArray, odd: oddArray };
+}
+
+
+const separatedArrays = separateEvenAndOdd(Array);
+console.log("Even numbers:", separatedArrays.even);
+console.log("Odd numbers:", separatedArrays.odd);
+// console.log(Array.filter(separateEvenAndOdd(arr))); chi ashxatum, inchu????
+
+
+
+
+
+
+// 6. Write toString
+In the given array, write toString using a for loop.
+
+1. example
+
+function ToString(arr) {
+    let result = '';
+
+    for (let i = 0; i < arr.length; i++) {
+        result += arr[i].toString();
+        if (i < arr.length - 1) {
+            result += '***';
+        }
+    }
+
+    return result;
+}
+
+const arr = [5, 21, 5, 487, 254, 32, 67];
+const arrayString = ToString(arr);
+console.log(arrayString); 
+
+// 5***21***5***487***254***32***67
+
+
+
+2. example by toString
+
+const matrix = [
+    firstArr = [1, 3,  11, 2],
+    secondArr= [4, 5, 6, 66, 89],
+    thirdArr= [7, 8, 9, 55, 78],
+  ];
+ 
+for (let i = 0; i < arr.length; i++) {
+    if (Val[i] !== undefined);{
+       Val[i] = firstArr; 
+    }
+    if (Val[i] !== undefined);{
+        Val[i] = secondArr;
+    }
+    
+    if (Val[i] !== undefined);{
+        Val[i] = thirdArr;
+    }
+}
+
+return matrix;
+
+console.log(matrix.toString());
+console.log(firstArr.toString());
+console.log(secondArr.toString());
+console.log(thirdArr.toString());  
+
+/// chi ashxatum, piti bolori hamar array length haytarareyi????
+
+
+
+// 7. Write join
+In the given array, write join using a for loop.
+
+function data(arr, separator) {
+    let result = '';
+
+    for (let i = 0; i < arr.length; i++) {
+        result = result + arr[i].toString();
+        if (i < arr.length - 1) {
+            result = result + separator;
+        }
+    }
+
+    return result;
+}
+
+const array = [5, 21, 5, 487, 254, 32, 67];
+const separator = ('-');
+const array2 = data(array, separator);
+console.log(array2);
+
+
+//5-21-5-487-254-32-67
