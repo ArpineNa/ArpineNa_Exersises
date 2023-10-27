@@ -1,0 +1,47 @@
+1.
+  
+function func() {
+    let a = [1, 2, 3, 4, 5, 6];
+    let result = "";
+
+    for (let i = 0; i < a.length; i++) {
+        result += a[i];
+        if (i < a.length - 1) {
+            result += '|';
+        }
+    }
+
+    console.log(result);
+}
+
+func();
+
+// 1|2|3|4|5|6
+
+
+2. 
+
+const matrix = [
+    [1, 2, 3, 4, 5, 6],
+    ["cars", "fruits", "Wind", "Water", "Fire", "snow"],
+  ];  
+
+function joinMatrixWithSeparator(matrix, separator) {
+    const joinedArrays = [];
+  
+    for (let i = 0; i < matrix.length; i++) {
+      const joinedSubarray = matrix[i].join(separator);
+      joinedArrays.push(joinedSubarray);
+    }
+  
+    return joinedArrays;
+  }
+      
+  const separator = '|';
+  const joinedMatrix = joinMatrixWithSeparator(matrix, separator);
+  
+  for (let i = 0; i < joinedMatrix.length; i++) {
+    console.log(joinedMatrix[i]);
+  }
+// 1|2|3|4|5|6
+cars|fruits|Wind|Water|Fire|snow
