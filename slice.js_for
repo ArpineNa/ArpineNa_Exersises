@@ -1,0 +1,72 @@
+1. Write code using slice method by for function
+
+let arr = [23, 56, 87, 32, 75, 13];
+
+const slicedArr = arr.slice(1, 5);
+console.log("Using slice:", slicedArr);
+
+for (let i = 0; i < arr.length; i++) {
+  arr[i] += 10;
+}
+
+console.log("Using for loop to add 10 to each element:", arr);
+
+// Using slice: [ 56, 87, 32, 75 ]
+Using for loop to add 10 to each element: [ 33, 66, 97, 42, 85, 23 ]
+
+
+
+2.
+
+let arr = [23, 56, 87, 32, 75, 13];
+
+const slicedArr = arr.slice(1, 5);
+console.log("Sliced portion of the array:", slicedArr);
+
+for (let i = 0; i < slicedArr.length; i++) {
+    slicedArr[i] *= 2;
+}
+
+console.log("Doubled elements in the sliced portion:", slicedArr);
+
+for (let i = 1; i <= 4; i++) {
+    arr[i] = slicedArr[i - 1];
+}
+
+console.log("Updated original array with modified portion:", arr);
+
+// 
+Sliced portion of the array: [ 56, 87, 32, 75 ]
+Doubled elements in the sliced portion: [ 112, 174, 64, 150 ]
+Updated original array with modified portion: [ 23, 112, 174, 64, 150, 13 ] 
+
+
+
+
+3. Comperative tast withe slice and splice
+
+Write code using:
+a. slice to create a new array with elements from index 1 to 3,
+b. Using splice to remove elements from index 1 to 3,
+c. Using a for loop to double each element in the array.
+
+
+const numbers = [1, 2, 3, 4, 5];
+
+const slicedNumbers = numbers.slice(1, 4);
+console.log("Using slice:", slicedNumbers);
+
+const removedNumbers = numbers.splice(1, 3);
+console.log("Using splice (removed elements):", removedNumbers);
+console.log("Array after using splice:", numbers);
+
+for (let i = 0; i < numbers.length; i++) {
+    numbers[i] *= 2;
+}
+
+console.log("Using for loop to double elements:", numbers);
+
+// Using slice: [ 2, 3, 4 ]
+Using splice (removed elements): [ 2, 3, 4 ]
+Array after using splice: [ 1, 5 ]
+Using for loop to double elements: [ 2, 10 ]
