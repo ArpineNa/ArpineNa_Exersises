@@ -1,0 +1,22 @@
+1.
+
+let webDvlop = ["HTML", "CSS", "JS", "Bootstrap"];
+
+const removedElement = webDvlop.splice(2, 1);                        //// Using splice to remove the "JS" element from the array
+console.log("Removed element:", removedElement);
+console.log("Array after removing 'JS':", webDvlop);
+
+const replacement = "React";                                      // Using a for loop to replace an element at a specific index
+const indexToReplace = 2;
+for (let i = 0; i < webDvlop.length; i++) {
+  if (i === indexToReplace) {
+    webDvlop[i] = replacement;
+  }
+}
+
+console.log("Array after replacing element at index 2 with 'React':", webDvlop);
+
+
+// Removed element: [ 'JS' ]
+Array after removing 'JS': [ 'HTML', 'CSS', 'Bootstrap' ]
+Array after replacing element at index 2 with 'React': [ 'HTML', 'CSS', 'React' ]
